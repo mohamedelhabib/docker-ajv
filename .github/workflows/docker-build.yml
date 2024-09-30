@@ -34,3 +34,5 @@ jobs:
     - name: Build Docker image
       # build the image with the Dockerfile in the current directory and tag it with the git tag
       run: docker build . --file Dockerfile --tag mohamedelhabib/docker-ajv:$GITHUB_REF_NAME
+    - name: Push Docker image
+      run: docker push mohamedelhabib/docker-ajv:$GITHUB_REF_NAME
