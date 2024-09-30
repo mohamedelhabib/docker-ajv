@@ -33,4 +33,4 @@ jobs:
 
     - name: Build Docker image
       # build the image with the Dockerfile in the current directory and tag it with the git tag
-      run: docker build . --file Dockerfile --tag mohamedelhabib/docker-ajv:${{ env.GITHUB_REF_SLUG }}
+      run: docker build . --file Dockerfile --tag mohamedelhabib/docker-ajv:$GITHUB_REF_NAME
